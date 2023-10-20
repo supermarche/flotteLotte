@@ -1,0 +1,2 @@
+login & user management: https://codingstatus.com/create-registration-and-login-form-in-node-js-mysql/
+acme / let's encrypt: https://www.npmjs.com/package/greenlock-express
