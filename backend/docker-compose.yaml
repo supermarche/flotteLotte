@@ -1,0 +1,6 @@
+services:
+  webfrontend:
+    build: frontend/
+    ports:
+      - 443:443
+      -  80:80

@@ -1,0 +1,8 @@
+{
+  "name": "FlotteLotte",
+  "version": 0.1,
+  "dependencies": {
+    "express": "^4.18.2",
+    "greenlock-express": "^4.0.3"
+  }
+}
