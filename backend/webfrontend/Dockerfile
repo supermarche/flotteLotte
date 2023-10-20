@@ -4,10 +4,11 @@ RUN apt-get update; apt-get install --no-install-recommends dumb-init
 
 USER node
 WORKDIR /webfrontend/
-COPY --chown=node:node package.json package-lock.json server.js app.js index.html .
+COPY --chown=node:node package.json package-lock.json server.js app.js .
 
 RUN npm ci
 
-RUN mkdir greenlock.d
+RUN mkdir greenlock.d && mkdir public
+COPY --chown=node:node index.html public/
 RUN echo '{ "sites": [{ "subject": "flottelotte.mooo.com" }] }' > greenlock.d/config.json
 CMD [ "dumb-init", "node", "server.js"]
