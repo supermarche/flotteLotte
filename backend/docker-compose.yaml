@@ -11,4 +11,4 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=flotteLotteUnterwegs
     volumes:
-      - mysql/:/docker-entrypoint-initdb.d
+      - ./mysql/:/docker-entrypoint-initdb.d
