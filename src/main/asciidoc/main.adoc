@@ -3,25 +3,25 @@
 ## Ausgangssituationen
 
 *Beispiel 1*
-Herbert wohnt in Niesky und fährt jeden Morgen zwischen 7-9 Uhr von Niesky nach Görlitz Zentrum. Gunter hat nächste Woche Dienstag einen Zahnarzttermin in Görlitz.  Er wohnt in Oedernitz. Gunter hat kein Auto und braucht eine Möglichkeit nach Görlitz zu fahren. Oedernitz ist über den ÖPNV schlecht angebunden. Die einzige möglichkeit um nach Görlitz zu kommen ist mit Umsteigen und langer Wartezeit verbunden.
+Herbert wohnt in Niesky und fährt jeden Morgen zwischen 7-9 Uhr von Niesky nach Görlitz Zentrum. Gunter hat nächste Woche Dienstag einen Zahnarzttermin in Görlitz.  Er wohnt in Ödernitz. Gunter hat kein Auto und braucht eine Möglichkeit nach Görlitz zu fahren. Ödernitz ist über den ÖPNV schlecht angebunden. Die einzige möglichkeit um nach Görlitz zu kommen ist mit Umsteigen und langer Wartezeit verbunden.
 
 *Beispiel 2*
 Am Wochenende fährt das Paar Müller, welches in Niesky wohnt, nach Görlitz um ein Restaurant zu besuchen und anschließend ins Kino zu gehen.
-Frau Schulze wohnt in Wiesa und möchte am gleichen Tag ihre Tochter in Görlitz besuchen. Am Wochende fährt nur alle 2 Stunden ein Bus von Wiesa nach Görlitz und die Abfahrtzeit ist so ungünstig, das Frau Schulze bereits nach einer halben Stunde den nächsten Bus für die Rückfahrt nehmen müsste, weil nach 16 Uhr kein Bus mehr fährt.
+Frau Schulze wohnt in Wiesa und möchte am gleichen Tag ihre Tochter in Görlitz besuchen. Am Wochenende fährt nur alle 2 Stunden ein Bus von Wiesa nach Görlitz und die Abfahrtzeit ist so ungünstig, das Frau Schulze bereits nach einer halben Stunde den nächsten Bus für die Rückfahrt nehmen müsste, weil nach 16 Uhr kein Bus mehr fährt.
 
 *Beispiel 3*
-Herr Clausen fährt mehrmals in der Woche von Wiesa nach Görlitz um dort einer unregemäßigen Tätigkeit nachzugehen. Er hat aus finanziellen Gründen kein Auto. Die ÖPNV Anbindung nach Görlitz ist schlecht. Zu der Zeit, wenn Herr Clausen nach Görlitz fahren möchte fahren viele Pendler von Niesky nach Görlitz. Alle haben noch Sitzplätze frei. Herr Clausen würde gerne mitgenommen werden, aber er kennt keinen der Pendler und traut sich nicht zu fragen. Einige der Pendler möchten gerne eine Mitfahrgelegenheit anbieten um anderen Menschen eine bessere Mobilität anzubieten, aber sie kennen Herrn Clausen nicht.
+Herr Clausen fährt mehrmals in der Woche von Wiesa nach Görlitz um dort einer unregelmäßigen Tätigkeit nachzugehen. Er hat aus finanziellen Gründen kein Auto. Die ÖPNV-Anbindung nach Görlitz ist schlecht. Zu der Zeit, wenn Herr Clausen nach Görlitz fahren möchte fahren viele Pendler von Niesky nach Görlitz. Alle haben noch Sitzplätze frei. Herr Clausen würde gerne mitgenommen werden, aber er kennt keinen der Pendler und traut sich nicht zu fragen. Einige der Pendler möchten gerne eine Mitfahrgelegenheit anbieten um anderen Menschen eine bessere Mobilität anzubieten, aber sie kennen Herrn Clausen nicht.
 
 *Beispiel 4*
-Frau Noname hat ein eigenes Auto, welches aber aus ökologischen Gründen nur so wenig wie möglich bentutzt wird. Sie möchte gern eine Mitfahrgelegenheit wahrnehmen, bei jemandem der sowieso die gleiche Strecke fährt.
+Frau Noname hat ein eigenes Auto, welches aber aus ökologischen Gründen nur so wenig wie möglich benutzt wird. Sie möchte gern eine Mitfahrgelegenheit wahrnehmen, bei jemandem der sowieso die gleiche Strecke fährt.
 
 ## Ziele
 
-- Anbieten einer Platform für Mitfahrgelegeneheite auf Kurzstrecke (bis 50km), um die Mobilität in Gebieten mit schlechter ÖPNV Anbindung zu verbessern und Menschen Mobilität anbieten zu können, die kein eigenes Auto haben.
+- Anbieten einer Platform für Mitfahrgelegenheiten auf Kurzstrecke (bis 50km), um die Mobilität in Gebieten mit schlechter ÖPNV Anbindung zu verbessern und Menschen Mobilität anbieten zu können, die kein eigenes Auto haben.
 - Der Fahrer soll sich nicht zeitlich festlegen müssen. Er muss die Fahrt auch nicht vor Fahrtantritt einstellen.
-- Der Mitfahrer meldet einen Bedarf an und ist zeitlich felxibel.
+- Der Mitfahrer meldet einen Bedarf an und ist zeitlich flexibel.
 - Durch Nutzerprofile soll eine Vertrauensbasis zwischen Fahrer und Mitfahrer geschaffen werden
-- Möglichst einfache Nutzung für den Fahrer. Die Monetarisierung der Fahrt steht im Hintergrund. Es geht um die Mobilität der Menschen. Es sollen die sowiso statt findenden Fahrten genutzt werden, um anderen Menschen Mobilität anzubieten. Damit wird die Umwelt geschont, die Auslastung der einzelnen Fahrzeuge erhöht, die Individualfahrten werden reduziert und die Parkplatzsituation an den Zielorten verbessert.
+- Möglichst einfache Nutzung für den Fahrer. Die Monetarisierung der Fahrt steht im Hintergrund. Es geht um die Mobilität der Menschen. Es sollen die sowieso statt findenden Fahrten genutzt werden, um anderen Menschen Mobilität anzubieten. Damit wird die Umwelt geschont, die Auslastung der einzelnen Fahrzeuge erhöht, die Individualfahrten werden reduziert und die Parkplatzsituation an den Zielorten verbessert.
 - Besonderheit: der Fahrer muss keine Fahrt einstellen. Er bekommt mögliche Mitfahrer beim Start der Fahrt angezeigt.
 
 ## Daten
@@ -94,3 +94,4 @@ Frau Noname hat ein eigenes Auto, welches aber aus ökologischen Gründen nur so
 ### Fahrt löschen
 
 * Der Fahrer kann ohne Angabe von Gründen die Fahrt löschen. Die Mitfahrer werden darüber informiert und sind anschließend wieder für alle Fahrer sichtbar.
+
