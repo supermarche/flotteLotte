@@ -2,5 +2,9 @@ services:
   webfrontend:
     build: frontend/
     ports:
+      # This is the entrypoint to our app
       - 443:443
       -  80:80
+
+  mysql:
+    image: mysql:8
