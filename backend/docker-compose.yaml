@@ -12,3 +12,9 @@ services:
       - MYSQL_ROOT_PASSWORD=flotteLotteUnterwegs
     volumes:
       - ./mysql/:/docker-entrypoint-initdb.d
+
+  # for debug purposes
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
