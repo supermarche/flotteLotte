@@ -1,0 +1,96 @@
+# Flotte Lotte
+
+## Ausgangssituationen
+
+*Beispiel 1*
+Herbert wohnt in Niesky und fährt jeden Morgen zwischen 7-9 Uhr von Niesky nach Görlitz Zentrum. Gunter hat nächste Woche Dienstag einen Zahnarzttermin in Görlitz.  Er wohnt in Oedernitz. Gunter hat kein Auto und braucht eine Möglichkeit nach Görlitz zu fahren. Oedernitz ist über den ÖPNV schlecht angebunden. Die einzige möglichkeit um nach Görlitz zu kommen ist mit Umsteigen und langer Wartezeit verbunden.
+
+*Beispiel 2*
+Am Wochenende fährt das Paar Müller, welches in Niesky wohnt, nach Görlitz um ein Restaurant zu besuchen und anschließend ins Kino zu gehen.
+Frau Schulze wohnt in Wiesa und möchte am gleichen Tag ihre Tochter in Görlitz besuchen. Am Wochende fährt nur alle 2 Stunden ein Bus von Wiesa nach Görlitz und die Abfahrtzeit ist so ungünstig, das Frau Schulze bereits nach einer halben Stunde den nächsten Bus für die Rückfahrt nehmen müsste, weil nach 16 Uhr kein Bus mehr fährt.
+
+*Beispiel 3*
+Herr Clausen fährt mehrmals in der Woche von Wiesa nach Görlitz um dort einer unregemäßigen Tätigkeit nachzugehen. Er hat aus finanziellen Gründen kein Auto. Die ÖPNV Anbindung nach Görlitz ist schlecht. Zu der Zeit, wenn Herr Clausen nach Görlitz fahren möchte fahren viele Pendler von Niesky nach Görlitz. Alle haben noch Sitzplätze frei. Herr Clausen würde gerne mitgenommen werden, aber er kennt keinen der Pendler und traut sich nicht zu fragen. Einige der Pendler möchten gerne eine Mitfahrgelegenheit anbieten um anderen Menschen eine bessere Mobilität anzubieten, aber sie kennen Herrn Clausen nicht.
+
+*Beispiel 4*
+Frau Noname hat ein eigenes Auto, welches aber aus ökologischen Gründen nur so wenig wie möglich bentutzt wird. Sie möchte gern eine Mitfahrgelegenheit wahrnehmen, bei jemandem der sowieso die gleiche Strecke fährt.
+
+## Ziele
+
+- Anbieten einer Platform für Mitfahrgelegeneheite auf Kurzstrecke (bis 50km), um die Mobilität in Gebieten mit schlechter ÖPNV Anbindung zu verbessern und Menschen Mobilität anbieten zu können, die kein eigenes Auto haben.
+- Der Fahrer soll sich nicht zeitlich festlegen müssen. Er muss die Fahrt auch nicht vor Fahrtantritt einstellen.
+- Der Mitfahrer meldet einen Bedarf an und ist zeitlich felxibel.
+- Durch Nutzerprofile soll eine Vertrauensbasis zwischen Fahrer und Mitfahrer geschaffen werden
+- Möglichst einfache Nutzung für den Fahrer. Die Monetarisierung der Fahrt steht im Hintergrund. Es geht um die Mobilität der Menschen. Es sollen die sowiso statt findenden Fahrten genutzt werden, um anderen Menschen Mobilität anzubieten. Damit wird die Umwelt geschont, die Auslastung der einzelnen Fahrzeuge erhöht, die Individualfahrten werden reduziert und die Parkplatzsituation an den Zielorten verbessert.
+- Besonderheit: der Fahrer muss keine Fahrt einstellen. Er bekommt mögliche Mitfahrer beim Start der Fahrt angezeigt.
+
+## Daten
+
+* Nutzerprofile
+** Name, Geburtsdatum, Kontaktdaten, Profilbild, Bewertungen
+** Fahrzeugdaten: Kennzeichen, Automarke, Farbe
+* Bewegungsprofile. Diese werden nach Abschluss der Fahrt anonymisiert.
+** Start, Ziel, Zeit, Dauer, Fahrzeug, Fahrer, Mitfahrer, Bewertung
+
+## Use Cases
+
+### Registrierung
+
+* Anmeldung am Portal mit Name, Geburtsdatum, Kontaktdaten, Profilbild, Fahrzeugdaten
+* Ergänzung von Präferenzen (nichtraucher, Tiere, Musik, etc.)
+* bei Fahrern, hinzufügen von Fahrten, die regelmäßig stattfinden (hilfreich um Mitfahrerern eine bessere Planbarkeit zu ermöglichen)
+
+
+### Account löschen
+
+* Account löschen
+
+
+### Fahrt suchen, Anfrage zur Mitfahrgelegenheit stellen
+
+* Nutzer öfffnet die App
+* Nutzer gibt Start, Startzeit und Ziel ein.
+* Nutzer erhält eine Auskunft darüber, wie viele Fahrer zu der angegebenen Zeit voraussichtlich auf der Strecke eine Mitfahrgelegenheit anbieten.
+* Nutzer erstellt eine Anfrage zur Mitfahrgelegenheit oder ändert die Parameter und sucht erneut.
+
+
+### Fahrer startet die Fahrt
+
+* er steigt in das Auto
+* er startet die App
+* er gibt das Ziel ein
+* er bekommt mögliche Mitfahrer angezeigt, sowie die zusätzliche Fahrzeit und Strecke.
+* er wählt einen oder mehrere Mitfahrer aus.
+* die Mitfahrer bekommen eine Benachrichtigung, dass sie für die Mitfahrt ausgewählt wurden und der Zeit, wann sie abgeholt werden. Die geschätzte Ankunftszeit wird jede Minute automatisch aktualisiert.
+* die ausgewählten Mitfahrer sind für keine anderen Fahrer mehr sichtbar.
+* die App startet die Navigation zum erste Mitfahrer, über eine Drittanbieter-App auf dem Handy des Fahrers (z.B. Google Maps)
+* der Fahrer startet die Fahrt. Der Mitfahrer bekommt eine Benachrichtigung, dass die Fahrt gestartet wurde (mit aktualisierter Ankunftszeit).
+
+
+### Der Fahrer hat den ersten Mitarbeiter erreicht und möchste einen zweite Mitfahrer mitnehmen (Optional. Erstmal nur für einen Mitfahrer)
+
+* der Fahrer öffnet die App
+* er wählt den Mitfahrer aus, den er erreicht hat und mitnimmt.
+* er kann über die App die Navigation zum nächsten Mitarbeiter starten (z.B. Google Maps). Der bekommt eine Benachrichtigung, dass der Fahrer auf dem Weg ist.
+
+
+### Der Fahrer hat alle Mitfahrer erreicht und die Fahrt zum Zielort abgeschlossen.
+
+* der Fahrer öffnet die App
+* er wählt die Fahrt aus, die er beenden möchte
+* er beendet die Fahrt
+
+
+### Kommunikation
+
+* Fahrer und Mitfahrer können über die App Nachrichten austauschen. Diese werden automatisch nach Beenden der Fahrt gelöscht.
+
+
+### Bewertung
+
+* Fahrer und Mitfahrer können sich gegenseitig bewerten. Die Bewertung ist anonym.  Die Bewertung steht erst nach Abschluss der Fahrt zur Verfügung.
+
+
+### Fahrt löschen
+
+* Der Fahrer kann ohne Angabe von Gründen die Fahrt löschen. Die Mitfahrer werden darüber informiert und sind anschließend wieder für alle Fahrer sichtbar.
