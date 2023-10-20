@@ -9,6 +9,6 @@ services:
   mysql:
     image: mysql:8
     environment:
-      MYSQL_ROOT_PASSWORD=flotteLotteUnterwegs
+      - MYSQL_ROOT_PASSWORD=flotteLotteUnterwegs
     volumes:
       - mysql/:/docker-entrypoint-initdb.d
