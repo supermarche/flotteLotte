@@ -1,6 +1,6 @@
 services:
   webfrontend:
-    build: frontend/
+    build: webfrontend/
     ports:
       # This is the entrypoint to our app
       - 443:443
