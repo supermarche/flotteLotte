@@ -4,7 +4,7 @@ const express = require('express');
 const session = require('express-session')
 const app = express();
 
-app.use(session({ 
+app.use(session({
   secret: 'r0drU-gmr1j4D,SN?p)xniX@xiCF12:',
   resave: false,
   saveUninitialized: true,
@@ -18,6 +18,8 @@ app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Statically serve content from resources subfolder
+app.use("/resources", express.static("resources"));
 
 const registrationRouter = require('./routes/registration');
 const loginRouter = require('./routes/login');

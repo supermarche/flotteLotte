@@ -1,3 +1,6 @@
 login & user management: https://codingstatus.com/create-registration-and-login-form-in-node-js-mysql/
 acme / let's encrypt: https://www.npmjs.com/package/greenlock-express
 How to setup nodeJS in Docker: https://snyk.io/de/blog/10-best-practices-to-containerize-nodejs-web-applications-with-docker/
+
+ToDos:
+* Passwörter sollten mit bcrypt gesichert in der Datenbank gespeichert werden
