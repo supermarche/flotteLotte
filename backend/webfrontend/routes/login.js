@@ -13,9 +13,10 @@ router.post('/login', function(req, res){
   db.query(sql, [emailAddress, password], function (err, data, fields) {
     if(err) throw err
     if(data.length == 1){
-      req.session.loggedinUser= true;
-      req.session.emailAddress= emailAddress;
-      res.redirect('/app');
+      req.session.loggedinUser = true;
+      req.session.emailAddress = emailAddress;
+      req.session.userid = data[0].id;
+      res.redirect('/');
     }else{
       res.render('login-form',{alertMsg:"Benutzername oder Passwort fehlerhaft."});
     }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flotte Lotte!</title>
+  </head>
+  <body>
+    <h2>Willkommen bei Flotte Lotte</h2>
+    <p><b>Login Email</b> - <%=email %></p>
+  <div class="addTrip-form">
+    <h3>Fahrt hinzufügen</h3>
+  <form method="post" action="addTrip">
+    <div class="form-container">
+      <div><input type="text" placeholder="Von" name="point_of_departure" required></div>
+      <div><input type="text" placeholder="Nach" name="destination" required></div>
+      <div><input type="datetime-local" placeholder="Startzeit" name="trip_start" value="2023-10-21T10:00"></div>
+      <div><input type="datetime-local" placeholder="Ankunftszeit" name="trip_finish" value="2023-10-21T10:00"></div>
+      <fieldset>
+        <legend>Art der Fahrt:</legend>
+        <div>
+          <input type="radio" id="driver" name="trip" value="driver" checked />
+          <label for="driver">Ich möchte jemanden mitnehmen</label>
+        </div>
+        <div>
+          <input type="radio" id="passenger" name="trip" value="passenger" />
+          <label for="passenger">Ich suche eine Mitfahrgelegenheit</label>
+        </div>
+      </fieldset>
+    </div>
+    <button type="submit">Melden</button>
+  </form>
+  </div>
+</body>
+</html>
