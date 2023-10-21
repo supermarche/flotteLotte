@@ -26,13 +26,14 @@ const loginRouter = require('./routes/login');
 const dashboardRouter = require('./routes/app');
 const logoutRouter = require('./routes/logout');
 const addTripRouter = require('./routes/addTrip');
+const showTripRouter = require('./routes/showTrip');
 
 app.use('/', registrationRouter);
 app.use('/', loginRouter);
 app.use('/', dashboardRouter);
 app.use('/', logoutRouter);
 app.use('/', addTripRouter);
-app.get("/", )
+app.use('/', showTripRouter);
 
 module.exports = app;
 

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!--See https://docs.yellowmap.com/smartmaps-javascript/beispiele/routenplanung/routenberechnung-mit-geokodierung/
+-->
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Map Matching</title>
+</head>
+<body>
+    <%- include('loginHeader', {email: email}); %>
+    <div id="map-wrapper">
+        <div class="geocoder-form" style="z-index:1000">
+         <form id="route-single-slot-form">
+            <fieldset>
+              <input type="text" name="RouteStart" id="RouteStart" value="<%- trip.point_of_departure %>" placeholder="RouteStart">
+              <input type="text" name="RouteEnd" id="RouteEnd" value="<%- trip.destination %>" placeholder="RouteEnd">
+              Country <select type="text" name="RouteEnd" id="RouteCountry" value="DE" placeholder="RouteEnd"></select>
+              <button type="submit">Route</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+      <label id="lbduration">${tripDuration} </label>
+  <div id="map-wrapper">
+      <div id="waypoints">
+      </div>
+      <div id="map" style="height: 350px;"></div>
+   </div>
+  <!-- SmartMaps-API -->
+  <script src="https://www.yellowmap.de/api_rst/api/loader?libraries=free-3&apiKey=ET8z3jFIhUpQLg3Q8zScdxsdNH3VRqxYW8sTDcygzLct7jJVU6Z5ylZnh3VUcjGf"></script>
+  <script>
+    document.getElementById('lbduration').innerHTML="";
+    ym.ready(function (modules) {
+        //Matchingpoints
+        //Karte initialisieren
+        var map = ym.map("map", {
+          center: [52.146, 14.146],
+          zoom: 17,
+        });
+        //GeoJSON Layer für Match-Routing initalisieren und in Karte einzeichnen
+        var matchLayer = ym.geoJson();
+        matchLayer.addTo(map);
+        //GeoJSON Layer für Wegpunkte initalisieren und in Karte einzeichnen
+        var waypointsLayer = ym.geoJson();
+        waypointsLayer.addTo(map);
+        //Wenn Daten zu GeoJSON Layer hinzugefügt werden, Karte an Route ausrichten
+        matchLayer.on("add", (e) => {
+          if (!map.getBounds().contains(matchLayer.getBounds())) {
+            map.fitBounds(matchLayer.getBounds());
+          }
+        });
+        //Match-Routing für das Map Matching initalisieren
+        var matchRouting = new ym.services.MatchRouting();
+        //Match-Routing bei erfolgreicher Abfrage einzeichnen
+        matchRouting.on("success", function (request, response) {
+          console.log(response);
+          matchLayer.clearLayers();
+          matchLayer.addData(response.body);
+          var matchdest=response.body.features[0].properties.matchDestinations;
+          for(let feature in response.body.features.values()){
+            for(let property in feature.properties){
+                if(property.hasAttribute('matchDestinations')){
+                for(let matchDest in propmatchDestinations){
+            console.log("matchdest",matchDest.isMatch);
+          }}
+
+            }
+        }
+        console.log("response.body.features"+response.body.features);
+        })
+        ;
+        //Liste für Wegpunkte initialisieren
+        var pickUpPoint;
+        var waypoints = [];
+        //Match-Routing bei Click auf Karte berechnen
+        map.on("click", function (e) {
+          //Koordinate des Wegpunkts bestimmen und Marker in Karte einzeichnen
+          var latlng = e.latlng;
+          var marker = ym.marker(latlng).addTo(waypointsLayer);
+          //Wegpunkt hinzufügen und ab mind. zwei Wegpunkten das Matching berechnen
+          waypoints.push([latlng.lng, latlng.lat]);
+          if (waypoints.length >= 2) {
+            matchRouting.calcRoute(waypoints);
+         }
+        });
+   //Routing eingabe und darstellung
+        var countrys = {
+            "DE": "Germany",
+		    "PL": "Polen"
+        }
+		select = document.getElementById('RouteCountry');
+		for (let country in countrys){
+			var opt = document.createElement('option');
+            //"DE": "Germany",
+			opt.value = "DE";
+			opt.innerHTML = countrys[country];
+			select.appendChild(opt);
+		}
+		document.getElementById('RouteCountry').value = "DE";
+      var routeSingleSlotForm = document.getElementById('route-single-slot-form');
+      var routing = new ym.services.Routing();
+      // Define card content.
+      var stationLayer = ym.layerGroup();
+      var waypoints = [];
+      // Set route layer. This is the complete logic to draw a route with all
+      // its stations.
+      routingLayer = ym.geoJson(null, {
+        style: function(feature) {
+          // Drawing a polyline
+          if (feature.geometry.type === "LineString") {
+            return {
+              weight: 7,
+              opacity: 0.8
+            };
+          }
+        },
+        pointToLayer: function(feature, latlng) {
+          // Draw in stations with information.
+          var waypointMarker = ym.circleMarker(latlng);
+          waypointMarker.bindPopup(feature.properties.description);
+          return waypointMarker;
+        }
+      });
+      // Define map.
+      //var map = ym.map("map", {
+       // center: ym.latLng(52.156, 14.435568),
+       // zoom: 6
+      //});
+      // Draw in route layer.
+      map.addLayer(routingLayer);
+      map.addLayer(stationLayer);
+      routeSingleSlotForm.onsubmit = function(e) {
+        // Discard old card content.
+        waypoints = [];
+        if (routingLayer) {
+          routingLayer.clearLayers();
+        }
+        if (stationLayer) {
+          stationLayer.clearLayers();
+        }
+        e.preventDefault();
+        modules.geocode({
+			singleSlot: document.getElementById('RouteStart').value,
+			country: document.getElementById('RouteCountry').value
+		});
+		modules.geocode({
+			singleSlot: document.getElementById('RouteEnd').value,
+			country: document.getElementById('RouteCountry').value
+		});
+      };
+      ym.services.geoCoder.on('success', function(req, res) {
+		let firstelement = true;
+        var geoJSONCoords = [];
+        var geoJson = ym.geoJson(res.body, {
+          onEachFeature: function(feature, layer) {
+            layer.setIcon(ym.provider.Icon.Default());
+            var popUpContent = "";
+            if (feature.properties.street) {
+              popUpContent += feature.properties.street + ", "
+            }
+            if (feature.properties.zip) {
+              popUpContent += feature.properties.zip + " "
+            }
+            if (feature.properties.city) {
+              popUpContent += feature.properties.city + " "
+            }
+            if (feature.properties.cityPart) {
+              popUpContent += feature.properties.cityPart
+            }
+            layer.bindPopup(popUpContent);
+            geoJSONCoords.push(ym.latLng(feature.geometry.coordinates[1], feature.geometry.coordinates[0]));
+
+        },
+		  filter: function(feature, layer) {
+			if (firstelement == true) {
+				firstelement = false;
+				return true;
+			} else {
+				return false;
+			}
+		  }
+        });
+        stationLayer.addLayer(geoJson);
+        // If there is more than one result in the list of geocoded addresses
+        // the first one is used.
+        waypoints.push(geoJSONCoords[0]);
+        //Senden
+//         const request = new Request("https://flottelotte.mooo.com", {
+//         method: "POST",
+//         header: "Access-Control-Allow-Origin: *",
+//         body: '{"route": geoJSONCoords[0]}',
+//         });
+
+//         const url = request.url;
+//         const method = request.method;
+//         const credentials = request.credentials;
+
+//         const bodyUsed = request.bodyUsed;
+
+//         fetch(request)
+//   .then((response) => {
+//     if (response.status === 200) {
+//       return response.json();
+//     } else {
+//       throw new Error("Something went wrong on API server!");
+//     }
+//   })
+//   .then((response) => {
+//     console.debug(response);
+//     // …
+//   })
+//   .catch((error) => {
+//     console.error(error);
+//   });
+
+//gesendet
+        if (waypoints.length > 1) {
+            routing.calcRoute(waypoints,{"speedProfile":"FAST","routingTimeMode":"DEPARTURE"});
+
+        }
+      });
+      ym.services.geoCoder.on('error', function(req, res, errorType) {
+        console.log(arguments);
+      });
+      routing.on("success", function(request, response) {
+        routingLayer.addData(response.body);
+        map.fitBounds(routingLayer.getBounds());
+        var tripDuration=response.body.properties.duration;
+        tripDuration=tripDuration/60;
+        document.getElementById('lbduration').innerHTML = 'Sie fahren ungef&auml;hr '+Math.round(tripDuration)+ ' Minuten';
+        console.log("Reisezeit",tripDuration);
+      });
+    });
+
+  </script>
+
+</body>
+</html>
