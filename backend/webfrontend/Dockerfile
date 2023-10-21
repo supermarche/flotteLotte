@@ -4,7 +4,7 @@ RUN apt-get update; apt-get install --no-install-recommends dumb-init
 
 USER node
 WORKDIR /webfrontend/
-COPY --chown=node:node package.json package-lock.json server.js app.js .
+COPY --chown=node:node . .
 
 RUN npm ci
 
