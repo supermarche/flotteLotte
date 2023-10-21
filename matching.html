@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!--See https://docs.yellowmap.com/smartmaps-javascript/beispiele/routenplanung/routenberechnung-mit-geokodierung/
+-->
 <html>
 <head lang="en">
   <meta charset="UTF-8">
@@ -18,7 +20,7 @@
         </div>
       </div>
 
-      <div id="lbduration">${tripDuration} </div>
+      <label id="lbduration">${tripDuration} </label>
   <div id="map-wrapper">
       <div id="waypoints">
         <textarea
@@ -34,6 +36,7 @@
   <!-- SmartMaps-API -->
   <script src="https://www.yellowmap.de/api_rst/api/loader?libraries=free-3&apiKey=ET8z3jFIhUpQLg3Q8zScdxsdNH3VRqxYW8sTDcygzLct7jJVU6Z5ylZnh3VUcjGf"></script>
   <script>
+    document.getElementById('lbduration').innerHTML="";
     ym.ready(function (modules) {
         //Matchingpoints
         //Textfeld bestimmen, um Wegpunkte darstellen zu können:
@@ -62,7 +65,19 @@
           console.log(response);
           matchLayer.clearLayers();
           matchLayer.addData(response.body);
-        });
+          var matchdest=response.body.features[0].properties.matchDestinations;
+          for(let feature in response.body.features.values()){
+            for(let property in feature.properties){
+                if(property.hasAttribute('matchDestinations')){
+                for(let matchDest in propmatchDestinations){
+            console.log("matchdest",matchDest.isMatch);
+          }}
+          
+            }
+        }
+        console.log("response.body.features"+response.body.features);
+        })
+        ;
         //Liste für Wegpunkte initialisieren
         var pickUpPoint;
         var waypoints = [];
@@ -76,8 +91,7 @@
           waypointsInputTextArea.value = JSON.stringify(waypoints);
           if (waypoints.length >= 2) {
             matchRouting.calcRoute(waypoints);
-            matchRouting.contains(pickUpPoint);
-          }
+         }
         });
    //Routing eingabe und darstellung
         var countrys = {
@@ -223,7 +237,7 @@
         map.fitBounds(routingLayer.getBounds());
         var tripDuration=response.body.properties.duration;
         tripDuration=tripDuration/60;
-        document.getElementById('lbduration').innerHTML = 'Reisezeit beträgt '+tripDuration+ 'Minuten';
+        document.getElementById('lbduration').innerHTML = 'Sie fahren ungef&auml;hr '+Math.round(tripDuration)+ ' Minuten';
         console.log("Reisezeit",tripDuration);
       });
     });
