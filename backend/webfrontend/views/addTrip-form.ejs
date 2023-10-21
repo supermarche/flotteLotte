@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <style>
+      :root {
+        --smartmaps-boxshadow: 0 0px 0px rgba(0, 0, 0, 0.0);
+        --smartmaps-border: 4px none rgba(0, 0, 0, 0.2)
+      }
+    </style>
     <title>Flotte Lotte!</title>
     <!-- SmartMaps-API -->
     <script src="https://www.yellowmap.de/api_rst/api/loader?libraries=free-3,autocomplete-5&apiKey=ET8z3jFIhUpQLg3Q8zScdxsdNH3VRqxYW8sTDcygzLct7jJVU6Z5ylZnh3VUcjGf"></script>
@@ -29,27 +36,32 @@
   <div class="addTrip-form">
     <h3>Fahrt hinzufügen</h3>
   <form method="post" action="addTrip">
-      <div class="form-container">
-        <div id="map-wrapper">
-          <div><input id="Autocomplete1" type="search" placeholder="Von" name="point_of_departure" required></div>
-          <div><input id="Autocomplete2" type="search" placeholder="Nach" name="destination" required></div>
-        </div>
-      </div>
-      <div><input type="datetime-local" placeholder="Startzeit" name="trip_start" value="2023-10-21T10:00"></div>
-      <div><input type="datetime-local" placeholder="Ankunftszeit" name="trip_finish" value="2023-10-21T10:00"></div>
-      <fieldset>
-        <legend>Art der Fahrt:</legend>
-        <div>
-          <input type="radio" id="driver" name="trip" value="driver" checked />
-          <label for="driver">Ich möchte jemanden mitnehmen</label>
-        </div>
-        <div>
-          <input type="radio" id="passenger" name="trip" value="passenger" />
-          <label for="passenger">Ich suche eine Mitfahrgelegenheit</label>
-        </div>
-      </fieldset>
-    </div>
-    <button type="submit">Melden</button>
+      <table>
+        <tr>
+          <td><input id="Autocomplete1" type="search" placeholder="Von" name="point_of_departure" required></td>
+          <td><input id="Autocomplete2" type="search" placeholder="Nach" name="destination" required></td>
+        </tr>
+        <tr>
+          <td><input type="datetime-local" placeholder="Startzeit" name="trip_start" value="2023-10-21T10:00"></td>
+          <td><input type="datetime-local" placeholder="Ankunftszeit" name="trip_finish" value="2023-10-21T10:00"></td>
+        </tr>
+        <tr>
+          <td  colspan=2>
+          <fieldset>
+            <legend>Art der Fahrt:</legend>
+            <div>
+              <input type="radio" id="driver" name="trip" value="driver" checked />
+              <label for="driver">Ich möchte jemanden mitnehmen</label>
+            </div>
+            <div>
+              <input type="radio" id="passenger" name="trip" value="passenger" />
+              <label for="passenger">Ich suche eine Mitfahrgelegenheit</label>
+            </div>
+          </fieldset>
+          <button type="submit">Fahrt anmelden</button>
+          </td>
+        </tr>
+      </table>
   </form>
   </div>
 </body>

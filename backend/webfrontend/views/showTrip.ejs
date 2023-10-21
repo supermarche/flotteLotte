@@ -3,6 +3,7 @@
 -->
 <html>
 <head lang="en">
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
   <meta charset="UTF-8">
   <title>Map Matching</title>
 </head>
@@ -130,7 +131,8 @@
       // Draw in route layer.
       map.addLayer(routingLayer);
       map.addLayer(stationLayer);
-      routeSingleSlotForm.onsubmit = function(e) {
+
+      function processRoute(e) {
         // Discard old card content.
         waypoints = [];
         if (routingLayer) {
@@ -139,7 +141,7 @@
         if (stationLayer) {
           stationLayer.clearLayers();
         }
-        e.preventDefault();
+        if (e) e.preventDefault();
         modules.geocode({
 			singleSlot: document.getElementById('RouteStart').value,
 			country: document.getElementById('RouteCountry').value
@@ -149,6 +151,10 @@
 			country: document.getElementById('RouteCountry').value
 		});
       };
+
+      routeSingleSlotForm.onsubmit = processRoute;
+      setTimeout(() => processRoute(), 200);
+
       ym.services.geoCoder.on('success', function(req, res) {
 		let firstelement = true;
         var geoJSONCoords = [];
