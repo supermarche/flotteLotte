@@ -1,3 +1,5 @@
 .linode_token
 .flotteLotte*
 node_modules
+.idea
+.gradle
