@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Umkreissuche</title>
+</head>
+<body>
+  <script
+    src="https://www.yellowmap.de/api_rst/api/loader?libraries=enterprise&apiKey=ET8z3jFIhUpQLg3Q8zScdxsdNH3VRqxYW8sTDcygzLct7jJVU6Z5ylZnh3VUcjGf"></script>
+  <div id="map" style="height: 400px; width: 500px;"></div>
+  <script>
+    ym.ready(function (modules) {
+      // Karte definieren.
+      var map = new ym.map("map", {
+        center: new ym.latLng(51.146, 14.146),
+        zoom: 14
+      });
+      window.map = map;
+      // Umkreissuche definieren.
+      var address = new ym.services.AddressSearch();
+      address.byBranch(['CGGA'], map.getCenter(), 50000);
+      //Geo Json
+      var geoJson = new ym.geoJson(null, {
+        onEachFeature: function (feature, layer) {
+          layer.bindPopup("<p>" + feature.properties.jcard.address.companyName + "</p>");
+        }
+      });
+      //Erfolgreich
+      address.on('success', function (req, res) {
+        geoJson.addData(res.body);
+      });
+      //Nicht erfolgreich 
+      address.on('error', function (request, response) {
+        console.log(response.xhr);
+        console.log(response.event);
+      });
+      geoJson.addTo(map);
+    });
+  </script>
+</body>
+</html>

@@ -17,6 +17,8 @@
           </form>
         </div>
       </div>
+
+      <div id="lbduration">${tripDuration} </div>
   <div id="map-wrapper">
       <div id="waypoints">
         <textarea
@@ -179,37 +181,37 @@
         // the first one is used.
         waypoints.push(geoJSONCoords[0]);
         //Senden
-        const request = new Request("https://flottelotte.mooo.com", {
-        method: "POST",
-        header: "Access-Control-Allow-Origin: *",
-        body: '{"route": geoJSONCoords[0]}',
-        });
+//         const request = new Request("https://flottelotte.mooo.com", {
+//         method: "POST",
+//         header: "Access-Control-Allow-Origin: *",
+//         body: '{"route": geoJSONCoords[0]}',
+//         });
 
-        const url = request.url;
-        const method = request.method;
-        const credentials = request.credentials;
+//         const url = request.url;
+//         const method = request.method;
+//         const credentials = request.credentials;
 
-        const bodyUsed = request.bodyUsed;
+//         const bodyUsed = request.bodyUsed;
 
-        fetch(request)
-  .then((response) => {
-    if (response.status === 200) {
-      return response.json();
-    } else {
-      throw new Error("Something went wrong on API server!");
-    }
-  })
-  .then((response) => {
-    console.debug(response);
-    // …
-  })
-  .catch((error) => {
-    console.error(error);
-  });
+//         fetch(request)
+//   .then((response) => {
+//     if (response.status === 200) {
+//       return response.json();
+//     } else {
+//       throw new Error("Something went wrong on API server!");
+//     }
+//   })
+//   .then((response) => {
+//     console.debug(response);
+//     // …
+//   })
+//   .catch((error) => {
+//     console.error(error);
+//   });
 
 //gesendet
         if (waypoints.length > 1) {
-          routing.calcRoute(waypoints);
+          routing.calcRoute(waypoints,{"speedProfile":"FAST","routingTimeMode":"DEPARTURE"});
 
         }
       });
@@ -219,6 +221,10 @@
       routing.on("success", function(request, response) {
         routingLayer.addData(response.body);
         map.fitBounds(routingLayer.getBounds());
+        var tripDuration=response.body.properties.duration;
+        tripDuration=tripDuration/60;
+        document.getElementById('lbduration').innerHTML = 'Reisezeit beträgt '+tripDuration+ 'Minuten';
+        console.log("Reisezeit",tripDuration);
       });
     });
 
