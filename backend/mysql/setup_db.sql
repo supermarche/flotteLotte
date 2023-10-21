@@ -10,10 +10,11 @@ CREATE TABLE `user` (
 CREATE TABLE `trips` (
   `id` int(10) UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `userid` int(10) NOT NULL,
-  `point_of_departure` varchar(30) DEFAULT NULL,
-  `destination` varchar(30) DEFAULT NULL,
+  `point_of_departure` varchar(60) DEFAULT NULL,
+  `destination` varchar(60) DEFAULT NULL,
   `trip_start` bigint(20) UNSIGNED DEFAULT NULL,
-  `trip_finish` bigint(20) UNSIGNED DEFAULT NULL
+  `trip_finish` bigint(20) UNSIGNED DEFAULT NULL,
+  `driver` boolean NOT NULL
 ) DEFAULT CHARSET=latin1;
 
 -- Beispieldaten

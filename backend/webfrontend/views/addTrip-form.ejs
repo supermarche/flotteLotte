@@ -2,15 +2,39 @@
 <html>
   <head>
     <title>Flotte Lotte!</title>
+    <!-- SmartMaps-API -->
+    <script src="https://www.yellowmap.de/api_rst/api/loader?libraries=free-3,autocomplete-5&apiKey=ET8z3jFIhUpQLg3Q8zScdxsdNH3VRqxYW8sTDcygzLct7jJVU6Z5ylZnh3VUcjGf"></script>
+    <script>
+      ym.ready({ autocomplete: 5 }, function (modules) {
+      var geocoder = new ym.services.GeoCoder();
+      const autoCompleteDeparture = modules.autoComplete("#Autocomplete1", {
+          isoCountries: ['de'],
+          // Funktion wird aufgerufen, sobald ein Eintrag aus der Liste ausgewählt wurde.
+          onSelected: function (geoJson) {
+              geocoder.geocode(geoJson.properties);
+          }
+        });
+      const autoCompleteDestination = modules.autoComplete("#Autocomplete2", {
+          isoCountries: ['de'],
+          // Funktion wird aufgerufen, sobald ein Eintrag aus der Liste ausgewählt wurde.
+          onSelected: function (geoJson) {
+              geocoder.geocode(geoJson.properties);
+          }
+        });
+      });
+    </script>
   </head>
   <body>
     <%- include('loginHeader', {email: email}); %>
   <div class="addTrip-form">
     <h3>Fahrt hinzufügen</h3>
   <form method="post" action="addTrip">
-    <div class="form-container">
-      <div><input type="text" placeholder="Von" name="point_of_departure" required></div>
-      <div><input type="text" placeholder="Nach" name="destination" required></div>
+      <div class="form-container">
+        <div id="map-wrapper">
+          <div><input id="Autocomplete1" type="search" placeholder="Von" name="point_of_departure" required></div>
+          <div><input id="Autocomplete2" type="search" placeholder="Nach" name="destination" required></div>
+        </div>
+      </div>
       <div><input type="datetime-local" placeholder="Startzeit" name="trip_start" value="2023-10-21T10:00"></div>
       <div><input type="datetime-local" placeholder="Ankunftszeit" name="trip_finish" value="2023-10-21T10:00"></div>
       <fieldset>

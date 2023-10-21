@@ -3,7 +3,11 @@ var router = express.Router();
 var db=require('../database');
 // register hook
 router.get('/addTrip', function(req, res, next) {
-  res.render('addTrip-form', {email: req.session.emailAddress});
+  if(req.session.loggedinUser){
+    res.render('addTrip-form', {email: req.session.emailAddress});
+  } else {
+    res.redirect('/login');
+  }
 });
 // to store user input detail on post request
 router.post('/addTrip', function(req, res, next) {
