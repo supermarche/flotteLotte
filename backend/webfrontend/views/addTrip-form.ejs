@@ -4,8 +4,7 @@
     <title>Flotte Lotte!</title>
   </head>
   <body>
-    <h2>Willkommen bei Flotte Lotte</h2>
-    <p><b>Login Email</b> - <%=email %></p>
+    <%- include('loginHeader', {email: email}); %>
   <div class="addTrip-form">
     <h3>Fahrt hinzufügen</h3>
   <form method="post" action="addTrip">

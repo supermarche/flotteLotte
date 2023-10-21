@@ -19,5 +19,5 @@ CREATE TABLE `trips` (
 -- Beispieldaten
 INSERT INTO `user` (`first_name`, `last_name`, `email_address`, `password`)
 VALUES
-( 'Anton', 'Weber', 'anton@weber.de', 'schneider'),
+( 'Anton', 'Weber', 'anton@weber.de', 'anton'),
 ( 'Gunther', 'Schneider', 'gunther@schneider.de', 'gunther')
