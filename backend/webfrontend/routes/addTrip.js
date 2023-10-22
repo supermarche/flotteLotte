@@ -18,7 +18,7 @@ router.post('/addTrip', function(req, res, next) {
     destination: req.body.destination,
     trip_start: Date.parse(req.body.trip_start),
     trip_finish: Date.parse(req.body.trip_finish),
-    driver: req.body.driver == "driver"? true : false
+    driver: req.body.trip_type == "driver"? true : false
   }
 
   // check unique email address
