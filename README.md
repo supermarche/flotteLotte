@@ -34,6 +34,16 @@ index 559feac..0432c6a 100644
 +CMD ["node", "app.js"]
 +#CMD [ "dumb-init", "node", "server.js"]
 
+
+return ym.circleMarker(latlng, {
+					  radius: 0,
+					  fillColor: "#990000",
+					  color: "#ffffff",
+					  weight: 1,
+					  opacity: 1,
+					  fillOpacity: 0.0
+					});
+
 Dann ausführen (im backend Verzeichnis):
 docker compose up -d mysql 
 # Warten bis die Datenbank initialisiert wurde -- kann man docker compose logs mysql -f überprüft werden
