@@ -6,10 +6,16 @@ const db=require('../database');
 router.get('/', function(req, res, next) {
   if(req.session.loggedinUser){
     var sql='SELECT * FROM trips WHERE userid =?';
-    var trips;
     db.query(sql, [req.session.userid], function (err, data, fields) {
       if(err) throw err
-      res.render('app', {email:req.session.emailAddress, messages: "", trips: data })
+
+      data.forEach(each => {
+        each["match"] = false;
+        if((each.id == 1) || (each.id == 4)) {
+          each["match"] = true;
+        }
+      });
+      res.render('app', {email:req.session.emailAddress, messages: "", trips: data,  })
     });
   } else {
     res.redirect('/login');

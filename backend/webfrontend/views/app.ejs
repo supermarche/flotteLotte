@@ -3,6 +3,8 @@
     <head>
         <title>Flotte Lotte!</title>
         <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+        <link rel="stylesheet" href="/resources/simple.css">
+        <meta http-equiv="refresh" content="3; URL='/'" />
     </head>
     <body>
         <%- include('loginHeader', {email: email}); %>
@@ -11,7 +13,7 @@
     <p><h3>Fahrten:</h3><ul>
         <% trips.forEach(function(item) { %>
             <li>
-                <a href="/showTrip?tripID=<%= item.id %>" ><%= item.point_of_departure %> -> <%= item.destination %></a>
+                <a class="<% if (item.match) { %>match<% } else { %>nomatch<% } %>"<" href="/showTrip?tripID=<%= item.id %>" ><%= item.point_of_departure %> -> <%= item.destination %></a>
             </li>
         <% }); %>
     </ul></p>
