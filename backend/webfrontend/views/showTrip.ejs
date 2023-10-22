@@ -77,14 +77,16 @@
         var route = [{
 	  	  	singleSlot: document.getElementById('RouteStart').value,
 		  	  country: document.getElementById('RouteCountry').value
-		    },
-        {singleSlot: "Helmut-Just Straße 20, Ödernitz", country: "DE"},
-        {singleSlot: "Jakobstraße 5, 02826 Görlitz", country: "DE"},
-        {
+		    }];
+        if ( document.getElementById('RouteEnd').value == "Bahnhofstraße 35, 02826 Görlitz") {
+          route.push({singleSlot: "Helmut-Just Straße 20, Ödernitz", country: "DE"});
+          route.push({singleSlot: "Jakobstraße 5, 02826 Görlitz", country: "DE"});
+        }
+        route.push({
           singleSlot: document.getElementById('RouteEnd').value,
           country: document.getElementById('RouteCountry').value
-        }
-        ]
+        });
+
         var currentInd=0;
         //Match-Routing bei Click auf Karte berechnen
         map.on("click", function (e) {

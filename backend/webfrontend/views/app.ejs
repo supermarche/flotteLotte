@@ -9,7 +9,11 @@
     <body>
         <%- include('loginHeader', {email: email}); %>
 	<p><a href="/addTrip">Fahrt anlegen</a></p>
-	<p>Meldungen: <%=messages %></p>
+	<p>Meldungen:
+        <% messages.forEach(item => { %>
+            <div class="message"><%= item %></div>
+        <% }); %>
+    </p>
     <p><h3>Fahrten:</h3><ul>
         <% trips.forEach(function(item) { %>
             <li>

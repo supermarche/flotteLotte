@@ -5,6 +5,7 @@ const db=require('../database');
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   if(req.session.loggedinUser){
+    var messages = [];
     var sql='SELECT * FROM trips WHERE userid =?';
     db.query(sql, [req.session.userid], function (err, data, fields) {
       if(err) throw err
@@ -15,7 +16,14 @@ router.get('/', function(req, res, next) {
           each["match"] = true;
         }
       });
-      res.render('app', {email:req.session.emailAddress, messages: "", trips: data,  })
+      const sql_getMessages = 'SELECT * FROM messages WHERE receiver =?';
+      db.query(sql_getMessages, [req.session.userid], function (err, data2, fields) {
+        if(err) throw err;
+        if(data2 && data2.length > 0) {
+          data2.forEach(each => messages.push(each.message));
+        }
+        res.render('app', {email:req.session.emailAddress, messages: messages, trips: data })
+      });
     });
   } else {
     res.redirect('/login');

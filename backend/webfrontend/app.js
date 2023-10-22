@@ -8,7 +8,7 @@ app.use(session({
   secret: 'r0drU-gmr1j4D,SN?p)xniX@xiCF12:',
   resave: false,
   saveUninitialized: true,
-  cookie: { maxAge: 60000 }
+  cookie: { maxAge: 300000 }
 }))
 
 // Render ejs files / set view engine
