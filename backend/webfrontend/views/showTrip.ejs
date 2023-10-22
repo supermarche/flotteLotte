@@ -165,6 +165,7 @@
         }
         if (e) e.preventDefault();
         modules.geocode(route[currentInd]);
+        currentInd++;
       };
 
       routeSingleSlotForm.onsubmit = processRoute;
@@ -242,9 +243,8 @@
 //   });
 
 //gesendet
-        if (waypoints.length > 3) {
+        if (waypoints.length == route.length) {
             routing.calcRoute(waypoints,{"speedProfile":"FAST", "type": "ROUTE", "routingTimeMode":"DEPARTURE"});
-
         }
       });
       ym.services.geoCoder.on('error', function(req, res, errorType) {
