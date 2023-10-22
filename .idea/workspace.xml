@@ -4,27 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50d68800-7c1d-4f80-96d9-9a27087b8688" name="Changes" comment="cleanup">
-      <change afterPath="$PROJECT_DIR$/praesentation/algorithm1.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/praesentation/pitch.adoc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/AlgorithmusFahrerStartetSpontan.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Beispiel1.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Konstanten.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/MapRoute.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/MapSearch.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/SimpleTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Fahrer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Mitfahrer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Strecke.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/temp/1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/temp/2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="50d68800-7c1d-4f80-96d9-9a27087b8688" name="Changes" comment="präsentatio hinzufügen">
+      <change afterPath="$PROJECT_DIR$/praesentation/ideen.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/praesentation/reveal.js/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/praesentation/reveal.js/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/praesentation/pitch.adoc" beforeDir="false" afterPath="$PROJECT_DIR$/praesentation/pitch.adoc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/praesentation/route1.puml" beforeDir="false" afterPath="$PROJECT_DIR$/praesentation/route1.puml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +55,8 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -89,7 +76,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/MarkusFengler/Dev/workspace/flotteLotte/praesentation",
+    "last_opened_file_path": "C:/Users/MarkusFengler/Dev/workspace/flotteLotte/praesentation/img",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -98,7 +85,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -177,7 +164,8 @@
       <workItem from="1697827540850" duration="266000" />
       <workItem from="1697827833380" duration="741000" />
       <workItem from="1697877729198" duration="21710000" />
-      <workItem from="1697956743404" duration="9538000" />
+      <workItem from="1697956743404" duration="11834000" />
+      <workItem from="1697969051995" duration="2719000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1697826658962</created>
@@ -239,7 +227,39 @@
       <option name="project" value="LOCAL" />
       <updated>1697877879322</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="algorithmus hinzufügen">
+      <option name="closed" value="true" />
+      <created>1697968613566</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1697968613566</updated>
+    </task>
+    <task id="LOCAL-00010" summary="präsentatio hinzufügen">
+      <option name="closed" value="true" />
+      <created>1697968781328</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1697968781328</updated>
+    </task>
+    <task id="LOCAL-00011" summary="präsentatio hinzufügen">
+      <option name="closed" value="true" />
+      <created>1697968813253</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1697968813253</updated>
+    </task>
+    <task id="LOCAL-00012" summary="präsentatio hinzufügen">
+      <option name="closed" value="true" />
+      <created>1697968827276</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1697968827276</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,9 +289,14 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/praesentation/reveal.js" />
+    </ignored-roots>
     <MESSAGE value="init" />
     <MESSAGE value="Google Drive Austauschordner hinzufügen" />
     <MESSAGE value="cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
+    <MESSAGE value="algorithmus hinzufügen" />
+    <MESSAGE value="präsentatio hinzufügen" />
+    <option name="LAST_COMMIT_MESSAGE" value="präsentatio hinzufügen" />
   </component>
 </project>

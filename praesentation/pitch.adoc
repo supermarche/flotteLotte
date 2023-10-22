@@ -10,23 +10,33 @@
 :revealjs_pdfmaxpagesperslide: 3
 :customcss: flottelotte.css
 
+image::img/ichnehmdichmit.jpg[size=contain]
 
-==  Flotte Lotte Ridesharing
+[.columns]
+==  TEAM: Flotte Lotte
 
-image::img/ichnehmdichmit.jpg[background, size=contain]
+[.column]
+* Marc (Programmierung),
+* Roland (Programmierung)
+* Markus (Konzept, Präsentation)
 
-Marc, Roland, Markus +
-Team: Flotte Lotte
+[.column]
+image::img/ichnehmdichmit.jpg[size=contain]
 
 == Idee
 
-neue Mobilitätsmöglichkeiten für die ländliche Regionen schaffen
+neue Mobilitätsmöglichkeiten für die ländlichen Regionen schaffen
 
-=== Beobachtung
+[.columns]
+== Beobachtung
 
+[.column]
 * viele Menschen sind allein auf der Straße unterwegs
 * viele Fahrten können mit mehreren Personen durchgeführt werden, da sie ähnliche Startpunkte und Ziele haben, oder diese auf der Strecke liegen
 * bisherige Mitfahrgelegenheiten, haben noch nicht gezündet. Woran liegt das?
+
+[.column]
+image::img/route1.png[size=contain]
 
 == Unsere Lösung
 
@@ -55,7 +65,7 @@ neue Mobilitätsmöglichkeiten für die ländliche Regionen schaffen
 * Fahrer steigt ins Auto, gibt sein Ziel an. Er bekommt mögliche Mitfahrer angezeigt, die auf der Strecke liegen. Die Mitfahrt können direkt bestätigt werden
 * Der Mitfahrer bekommt die Info das er zur Zeit X an dem Punkt Y mitgenommen wird
 * Der Fahrer, steuert den Mitfahrer an, nimmt ihn bis zum dessen Zielpunkt mit und fährt weiter zu seinem Ziel
-- reduziert die Anzahl der Fahrzeuge auf der Straße
+* reduziert die Anzahl der Fahrzeuge auf der Straße
 * Der Mitfahrer kann sich beim Fahrer bedanken. Beide können sich anonym bewerten.
 
 == Abgrenzung zu anderen Systemen
@@ -83,4 +93,26 @@ neue Mobilitätsmöglichkeiten für die ländliche Regionen schaffen
 
 == Prototyp
 
-* https://flottelotte.github.io
+* https://github.com/supermarche/flotteLotte
+
+== Quellen
+
+=== Quellen - Informationen
+
+* https://github.com/features/copilot
+* https://www.openstreetmap.de/
+* https://www.geofabrik.de/
+* https://www.jetbrains.com/help/idea/ai-assistant.html
+* https://katja-diehl.de/wende-rueckwaerts-beliebter-on-demand-verkehr-omobi-droht-das-politische-aus-ein-gespraech-mit-gruender-clemens-deyerling-und-prof-andreas-knie/
+* https://www.abendblatt.de/nachrichten/article208389513/Mitfahrportale-Auto-teilen-Kosten-sparen.html
+
+
+== Quellen - Bilder
+
+* https://www.westfalen-blatt.de/owl/bielefeld/die-mitfahrgelegenheit-1139614?&npg
+* https://www.andreajoost.de/2015/02/vielen-dank-fuer-ihre-aufmerksamkeit/
+
+[%notitle]
+== Danke
+
+image::img/vielendank.jpg[background,size=contain]
