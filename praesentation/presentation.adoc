@@ -1,0 +1,291 @@
+= Vorstellung: FlotteLotte Ridesharing
+// = image:img/activebackup_icon.png[]  Vorstellung: FlotteLotte Ridesharing
+//= Title Slide
+:revealjsdir: reveal.js
+:revealjs_slideNumber: c/t
+:revealjs_showSlideNumber: all
+:revealjs_width: 960
+:revealjs_height: 600
+:revealjs_theme: white
+:revealjs_pdfmaxpagesperslide: 3
+:customcss: flottelotte.css
+
+
+==  Flotte Lotte Ridesharing
+// == image:img/activebackup_icon.png[]  Active Backup for Business
+// image::img/cover.jpg[background, size=contain]
+
+== Motivation
+
+=== Motivation
+
+Es soll ein Teil der fehlenden Mobilität in Räumen mit schlechter ÖPNV Anbindung kompensiert werden, indem bereits bestehende Fahrten von Privatpersonen für Mitfahrer geöffnet werden.
+
+* Anbieten einer App für Mitfahrgelegenheiten auf dem Land
+* der Focus lieft auf Kurzstrecken (5-50 km)
+* die Hürde für den Fahrer soll so gering wie möglich sein
+** bisher muss eine Fahrt vorher vom Fahrer geplant werden
+** es findet aufwändige Kommunikation zwischen Fahrern und Mitfahrern statt
+** der Fahrer verliert seine zeitliche Flexibilität, da er sich an die geplante Fahrt halten muss
+
+=== Motivation
+
+* die Auslastung der einzelnen Fahrzeuge soll dadurch erhöht werden
+* die Monetarisierung für den Fahrer ist optional.
+Die Bezahlung des Fahrers erfolgt durch den Dienst an der Gemeinschaft.
+Wenn der Mitfahrer möchte, kann er dem Fahrer einen Geldbetrag für die Fahrt geben.
+
+== Was bringt das Projekt?
+
+* es muss nicht zwingend zu weniger PKWs auf dem Land führen, da dort die individuelle Mobilität wichtig ist
+* Es kann die Auslastung der Fahrzeuge erhöhen, es sind weniger Fahrzeuge auf der Straße, die Parkplatzsituation wird entspannter
+* Die Verwendung des ÖPNV wird attraktiver, da ein Mix aus ÖPNV und Mitfahrgelegenheit die Qualität der Verkehrsanbindung verbessern kann
+* Einsparung von ineffizientem ÖPNV auf dem Land (Prof. Andreas Knie (https://www.abendblatt.de/nachrichten/article208389513/Mitfahrportale-Auto-teilen-Kosten-sparen.html[Mitfahrportale: Auto teilen, Kosten sparen, 11.10.2016])
+
+== Bereits bestehende Lösungen
+
+=== Pampa App
+
+https://www.pampa-mitfahren.de/[www.pampa-mitfahren.de]
+
+- hat 2019 Innovationspreis gewonnen.
+- war regional beschränkt auf einen Landkreis in Brandenburg
+- aktuell keine Informationen zum Stand des Projekts verfügbar.
+Web-Site ist offline.
+App ist nicht verfügbar.
+- Es scheint, als ob das Projekt eingestellt wurde.
+Eine Kontaktaufnahme zu einem der Initiatoren war nicht möglich.
+
+=== twogo
+
+https://www.twogo.com[www.twogo.com]
+
+- Mitfahrgelegenheit für Pendlerfahrten großer Arbeitgeber
+
+=== weitere
+
+- Es gibt eine Vielzahl von Anbietern für Mitfahrgelegenheiten. Alle setzen voraus, das der Fahrer die Fahrt vorher geplant wird.
+
+== Warum kann das Projekt im Landkreis Görlitz erfolgreich sein?
+
+* Die Zeit ist reif für solche Projekte.
+Der Strukturwandel ist immer Präsenter bei den Verantwortlichen, die die Zukunft planen.
+* viele öffentliche Fördergelder stehen zur Verfügung
+* Görlitz hat eine Reihe von Initiatoren und Initiativen, die sich für vielfältige Initiativen zum Strukturwandeln einsetzen
+* Der Kostendruck und das Umweltbewusstsein bei der Bevölkerung steigt und auch die Bereitschaft sich darauf einzustellen.
+* Unbezahlbar.land, Übernauten, Überlandfestival, ..
+
+== Ziele des Workshop
+
+- Entwicklung einer Idee mit der die Mobilität in ländlichen Regionen verbessert werden kann.
+Das entstandene Projekt kann weiterverwendet werden, um der Basis die Idee weiterzuentwickeln und umzusetzen
+- Bereitstellen der notwendigen Informationen und Präsentationsmaterialien um das Projekt in der Basis vorzustellen und weitere Mitstreiter zu gewinnen
+- Erstellen eines Prototyps, der die Idee veranschaulicht und die Machbarkeit demonstriert
+- Zusammenstellen der notwendigen Module und Schnittstellen, die für die Umsetzung notwendig sind
+- Prüfen der Machbarkeit einiger Kernkomponenten
+
+== Use Cases
+
+=== Pendlerfahrten
+
+Täglich fahren mehrere hundert Menschen (Fahrer) allein im eigenen PKW zur Arbeit nach Görlitz.
+Viele dieser Fahrten sind regelmäßig und finde n immer zur gleichen Zeit statt.
+Zeitgleich gibt es Menschen (Mitfahrer) die ebenfalls zur gleichen Zeit ein Zielpunkt auf der Strecke haben.
+
+=== Pendlerfahrten
+
+*CASE 1:* der Mitfahrer erreicht sein Ziel (was auf der Strecke liegt) über den ÖPNV nur mit mehrmaligem Umsteigen, benötigt für die Fahrt viel Zeit und die Abfahrts- oder Ankunftszeit ist zeitlich unkomfortabel
+
+*CASE 2:* Ein Mitfahrer pendelt aktuell noch mit dem eigenen Auto, möchte aber gerne auf den ÖPNV oder eine Mitfahrgelegenheit umsteigen, da er sich um die Umwelt sorgt und die Fahrtkosten reduzieren möchte.
+
+*LÖSUNG* über die App können Fahrer und Mitfahrer sich leicht finden und die Fahrt gemeinsam durchführen.
+
+=== Wochendfahrten
+
+*CASE 1:*:Am Wochende ist die ÖPNV-Anbindung auf dem Land in die Stand und umgekehrt schlecht.
+Besonders leicht abgelegene Orte sind nur schwer zu erreichen.
+Zeitgleich gibt es viele Fahrer die zu der Zeit auf der Strecke unterwegs sind und die noch freie Plätze im Auto haben.
++
+*LÖSUNG:* über die App kann der Mitfahrer einen Bedarf anmelden und der Fahrer kann bei Fahrtantritt entscheiden, ob er jemanden auf der Strecke mitnimmt.
+Er muss sich vorher nicht festlegen und bleibt zeitlich flexibel.
+
+=== Theaterbesuch, Party, Jugendveranstaltungen
+
+*CASE 1* Ein Mitfahrer möchte gerne ins Theater nach Görlitz.
+Die Anreise mit dem ÖPNV ist gut möglich, die letzte Rückfahrt liegt aber vor dem Ende der Veranstaltung.
+Zeitgleich git es fahrer die zur gleichen Zeit auf der Strecke unterwegs sind (zum Beispiel weil sie die gleiche Veranstaltung besuchen oder eine andere Veranstaltung zu der Zeit endet und sie danach nach Hause fahren).
++
+*LÖSUNG* über die App kann der Mitfahrer einen Bedarf anmelden und der Fahrer kann im Voraus angeben, dass er jemand auf der Strecke mitnehmen kann.
+
+=== Theaterbesuch, Party, Jugendveranstaltungen
+
+__Gründe, warum der Mitfahrer nicht mit eigenem Auto fahren möchte, könne auch sein, das er etwas trinken möchte oder die Parkplatzsituation am Zielort schlecht ist.
+__
+
+*Kita-Fahrgemeinschaften - weiter zum Arbeitsplatz*
+
+=== Kita-Fahrgemeinschaften
+
+*CASE 1:* Viele Eltern bringen mit dem Auto die Kinder in die Kita oder Schule.
+Danach fahren sie weiter zur Arbeit.
+Einige Eltern bringen die Kinder zur gleichen Zeit und haben ein ähnliches Ziel.
+
+*LÖSUNG:* Über die App können sich die Eltern finden und die Fahrt gemeinsam durchführen.
+Die Kinder werden von den Eltern in der Kita abgesetzt, einige Eltern lassen dann das Auto dort stehen und fahren in einer Fahrgemeinschaft weiter zur Arbeit.
+Die Eltern können sich abwechseln, wer das Auto in der Kita stehen lässt.
+Die App bietet nur den Initiator.
+Die Eltern, die sich gefunden haben, können sich anschließend selbst organisieren (was gerade für den Fall 'Kind Krank' wichtig ist).
+
+=== Spontane Fahrten
+
+*CASE 1:* Ein Mitfahrer möchte gern um 18 Uhr in Görlitz sein.
+Er hat aber keine Möglichkeit mit Auto oder ÖPNV den Ort zu erreichen.
+Er sucht einen Fahrer, der ihn mitnehmen kann.
+
+*LÖSUNG* über die App kann der Mitfahrer einen Bedarf anmelden und der Fahrer kann bei Fahrtantritt oder während der Fahrt entscheiden ob er noch jemanden mitnimmt.
+
+== Welche Funktionen bietet die App?
+
+=== Allgemeine Funktionen
+
+- Login
+- Registrierung
+- Profil löschen
+- Profilfoto, Bewertungssystem (schafft Transparenz und Vertrauen)
+- Präferenzen zum Fahrer/ Mitfahrer
+- Messanger-System um gegenseitig in Kontakt zu treten
+- Benachrichtigungssystem (SMS, E-Mail, Push)
+- Verwendung personalisierter Daten einschränken (vollständig verwendbar, anonymisiert, nicht verwendbar)
+- Fahrer melden oder blockieren
+
+=== Funktionen für den Fahrer
+
+- Fahrt spontan anbieten
+- geplante Fahrt anbieten
+- regelmäßige Fahrten hinterlegen. Diese müssen nicht tatsächlich stattfinden, bringen aber zusätzliche Informationen für den Mitfahrer, ob eine Fahrt angeboten wird.
+- Limits für maximale Umwege (Fahrdauer, Strecke)
+- letzte Ziele anbieten
+- Fahrt abbrechen, Mitfahrer nachträglich ablehnen
+
+=== Funktionen für den Mitfahrer
+
+- Bedarf anmelden. Mitfahrer bekommt bereits angemeldete Fahrten angezeigt, zu denen er sich anmelden kann. Es wird eine Wahrscheinlichkeit errechnet, ob eine Fahrt zu seiner Anfrage zustande kommen wird.
+- Meldung, wenn eine Fahrt angeboten wird, die zum Bedarf passt
+- Echtzeitinformation darüber, wenn der Fahrer am Abholpunkt eintreffen wird
+- Vorschlag eines empfohlen Zahlbetrag für die Fahrt
+- populäre Abholpunkte und Zielorte vorschlagen
+- letzte Abholpunkte und Zielorte vorschlagen
+- Beim Anmelden des Bedarf kann eine Vorlaufzeit angegeben werden, die der Mitfahrer benötigt um zum Abholpunkt zu kommen.
+- Zeitraum für Start oder Ziel angeben, wann dieses erreicht werden soll.
+- Fahrer ablehnen
+
+=== Backendfunktionen
+
+- KI gestützes Telefonssystem um älternen Menschen zu ermöglichen einen Bedarf über einen Bedarf anzumelden. Darüber werden auch Benachrichtigungen per SMS an das Telefon gesendet.
+- KI gestütztes Telefonsystem, damit der Fahrer während der Fahrt über die Freisprecheinrichtung einen Mitfahrer annehmen kann.
+- Schnittstelle zum ÖPNV Anbieter
+
+
+== Vorteile
+
+=== Vorteile für den Fahrer
+
+- minimale Einstiegshürde
+- Der Fahrer kann seine Fahrt spontan anbieten, direkt bei Fahrtantritt. Er muss sich nicht vorher festlegen.
+- das gute Gefühl etwas für andere zu tun
+- neue Leute kennenlernen
+- optionale Bezahlung durch den Mitfahrer
+- Bonierung über andere Systeme
+- er unterstützt ein System, was er selbst oder seine Familie auch nutzen kann
+
+=== Vorteile für den Mitfahrer
+
+- neu geschaffene Mobilitätsmöglichkeiten
+- schont die Umwelt, kein eigenes Auto notwendig
+- Verzicht auf Auto wird leichter
+
+=== Vorteile für den ÖPNV
+
+- Stärkung des ÖPNV durch die Kombination mit Mitfahrgelegenheiten +
+Gut angebundene Verbindungen werden häufiger genutzt da es eine Rückfahrtmöglichkeit gibt.
+- Schnittstelle zum ÖPNV Anbieter, der mit den Informationen zum Bedarf auch selbst die Fahrten starten kann. (Rufbus, Sammeltaxi ist bisher nicht sehr erfolgreich und zu aufwändig)
+- Zusätzliche Daten für den ÖPNV Anbieter, um die Fahrten besser zu planen (zeitliche und räumliche Hotspots)
+
+
+== Monetarisierung / Finanzierung
+
+- die Bezahlung des Fahrers ist Optional
+- der Landkreis und ÖPNV kann das Projekt unterstützen, indem es einen Vertrag mit flotte Lotte abschließt und die Fahrten je km mit einem finanziellen Beitrag zu unterstützen
+
+== Welche Anforderungen müssen erfüllt werden, damit das Projekt erfolgreich ist?
+
+- Es müssen deutlich mehr Fahrten angeboten werden, als es Mitfahrer gibt. Andernfalls ist es für den Mitfahrer unattraktiv den Dienst zu verwenden, da seine gewünschte Fahrt höchstwahrscheinlich keine Fahrer findet.
+
+== Kritische Masse
+
+Die Fahrer müssen motiviert werden so oft wie möglich die Mitfahrt anzubieten. Um das zu erreichen wurden mehrere Ideen entwickelt.
+
+=== Allgemeine Werbung
+
+* Plakatwerbung
+* Aufkleber für die Autos
+* Werbung bei Parkautomaten
+* Mitfahrer werden Fahrer und umgekehrt
+
+=== Werbung bei Veranstaltungen
+
+* Flyer Elternabenden, Sport und Freizeitveranstaltungen, Kulturveranstaltungen
+* Kino-Werbung
+* Werbung beim Verkauf von Theater oder Konzertkarten
+
+Hier kann eine direkte Association zwischen der Veranstaltung und der Mitfahrgelegenheit hergestellt werden. Viele Teilnehmer haben einen ähnlichen Weg und hätten gemeinsam fahren können, wenn sie voneinander gewusst hätten.
+
+=== Standortspezifische Werbung
+
+* Dashboard vor Kitas und Schulen, an Schulen, die anzeigen wie viele Fahrten am voerherigen Tag Mitfahrgelegeheiten angeboten wurden und wie viele Freie Plätze es noch gab. +
+Eltern könnten dadurch aufmerksam gemacht werden, das es ein hohes Potenzial gibt, unnötige Fahrten zu vermeiden.
+
+=== Werbung bei Firmen
+
+* Mitarbeiter, die viel pendeln, können gezielt angesprochen werden, ihre Fahrt doch als Mitfahrgelegenheit anzubieten.
+* Firmen, die viel Arbeit im Außendienst anbieten, könnten ihre Fahrt zum Kunden als Mitfahrgelegenheit anbieten. Die Firma könnte damit auch ihre Außendarstellung verbessern (Umweltbewusstsein, soziales Engagement)
+
+
+=== Finanzielle Anreize für Fahrer, die Fahrten anbieten
+
+Beispiel: für 1 Jahr stehen 100.000 € als Budget zur Verfügung um das Projekt bekannt zu machen. Jeder Fahrer bekommt für eine angemeldete Fahrt 10 ct je km, unabhängig, ob es einen Mitfahrer gibt, oder nicht. Die Bonierung erfolgt ab dem 5. Kilometer und ist auf 20 km je Fahrt begrenzt.
+
+100.000 € * 0,1 €/km = 1.000.000 km bonierte Mitfahrkilometer.
+1.000.000 km / 365 Tage = 2.739 km pro Tag / 15 km = *182 Fahrten pro Tag*, die boniert werden können (oder auch ohne Bonierung nicht angeboten werden würden).
+
+Unter Umständen muss das Einzugsgebiet eingeschränkt werden, damit die Fahrten ein ausreichend dichtes Netz bilden.
+
+
+=== Weitere finanzielle Anreize
+
+- Steuervergünstigungen
+- Unterstützung durch Umweltprämie
+- Kostenfreies Parken in der Stadt
+
+== Offene Fragen/ Weitere Schritte
+
+=== Offene Fragen/ Weitere Schritte
+
+- Wie hoch ist der tatsächliche Bedarf und wie hoch ist das Potenzial an Fahrern? Reichen 100 Angebote in Görlitz und Umgebung aus, oder müssen es 1000 sein? Was ist die kritische Masse?
+- Welche Fördermöglichkeiten gibt es? (Umsetzung, Werbung, Nachbetreuung)
+- Welche weiteren Möglichkeiten gibt es das Projekt bekannt zu machen und ausreichend Fahrer zu gewinnen?
+- Welche rechtlichen Anforderungen gibt es an ein solches System? Versicherungsschutz? Haftung?
+- Algorithmus erweitern um Mitnahme von mehr als einem Mitfahrer. Berücksichtigung der verfügbaren Plätze.
+- Umsetzbarkeit der KI gestützten Telefonie prüfen
+- Fragen zum Datenschutz klären
+
+
+
+
+
+
+
+
+
+
+

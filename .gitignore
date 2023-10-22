@@ -3,3 +3,8 @@
 node_modules
 .idea
 .gradle
+/target/
+/temp/
+/out/
+/gradle/
+/data/sachsen-latest.osm.pbf
