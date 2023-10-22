@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50d68800-7c1d-4f80-96d9-9a27087b8688" name="Changes" comment="präsentatio hinzufügen">
-      <change afterPath="$PROJECT_DIR$/praesentation/ideen.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="50d68800-7c1d-4f80-96d9-9a27087b8688" name="Changes" comment="Präsentation, Pitch aktualisieren">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/praesentation/pitch.adoc" beforeDir="false" afterPath="$PROJECT_DIR$/praesentation/pitch.adoc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/praesentation/route1.puml" beforeDir="false" afterPath="$PROJECT_DIR$/praesentation/route1.puml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,25 +67,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/MarkusFengler/Dev/workspace/flotteLotte/praesentation/img",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/MarkusFengler/Dev/workspace/flotteLotte/praesentation/img&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\MarkusFengler\Dev\workspace\flotteLotte\praesentation" />
@@ -165,7 +162,7 @@
       <workItem from="1697827833380" duration="741000" />
       <workItem from="1697877729198" duration="21710000" />
       <workItem from="1697956743404" duration="11834000" />
-      <workItem from="1697969051995" duration="2719000" />
+      <workItem from="1697969051995" duration="3755000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1697826658962</created>
@@ -259,7 +256,23 @@
       <option name="project" value="LOCAL" />
       <updated>1697968827276</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Präsentation, Pitch aktualisieren">
+      <option name="closed" value="true" />
+      <created>1697972437966</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1697972437966</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Präsentation, Pitch aktualisieren">
+      <option name="closed" value="true" />
+      <created>1697972531941</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1697972531941</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,6 +310,7 @@
     <MESSAGE value="cleanup" />
     <MESSAGE value="algorithmus hinzufügen" />
     <MESSAGE value="präsentatio hinzufügen" />
-    <option name="LAST_COMMIT_MESSAGE" value="präsentatio hinzufügen" />
+    <MESSAGE value="Präsentation, Pitch aktualisieren" />
+    <option name="LAST_COMMIT_MESSAGE" value="Präsentation, Pitch aktualisieren" />
   </component>
 </project>

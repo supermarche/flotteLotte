@@ -16,9 +16,9 @@ image::img/ichnehmdichmit.jpg[size=contain]
 ==  TEAM: Flotte Lotte
 
 [.column]
-* Marc (Programmierung),
+* Marc (Konzept, Programmierung),
 * Roland (Programmierung)
-* Markus (Konzept, Präsentation)
+* Markus (Konzept, Programmierung, Präsentation)
 
 [.column]
 image::img/ichnehmdichmit.jpg[size=contain]
